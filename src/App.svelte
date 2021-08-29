@@ -48,7 +48,7 @@
 <Tailwind />
 
 <main
-  class="text-center p-4 mx-0 flex flex-col justify-center items-center w-screen h-screen bg-red-300"
+  class="text-center p-4 mx-0 flex flex-col justify-center items-center w-screen min-h-screen overflow-scroll bg-red-300"
 >
   <div class="text-5xl">Covid in {selectedCountry}</div>
   <select name="country" bind:value={selectedCountry} class="my-4">
@@ -56,7 +56,7 @@
       <option value={countryData.country}>{countryData.country}</option>
     {/each}
   </select>
-  <div class="grid grid-cols-3 gap-3">
+  <div class="grid md:grid-cols-3 md:gap-3 grid-cols-2">
     <div
       class="col-start-1 col-span-2 bg-white rounded-xl flex flex-col justify-between px-4 py-2 w-64"
     >
@@ -87,7 +87,7 @@
       </div>
     </div>
     <div
-      class="flex flex-col col-start-3 col-span-1 rounded-md justify-between space-y-3"
+      class="flex flex-col mt-3 md:mt-0 col-start-1 col-span-2 md:col-start-3 md:col-span-1 rounded-md justify-between space-y-3"
     >
       <div class="bg-white rounded-md px-2 py-3">
         <div class="text-md font-light">New Deaths</div>
