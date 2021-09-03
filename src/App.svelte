@@ -1,10 +1,6 @@
 <script lang="ts">
-  import logo from "./assets/svelte.png";
-  import Counter from "./lib/Counter.svelte";
   import Tailwind from "./Tailwind.svelte";
   import { onMount } from "svelte";
-  import { count } from "./lib/stores";
-  import { each } from "svelte/internal";
 
   let selectedCountry = "Thailand";
   let data = [
@@ -70,9 +66,7 @@
         <div class="text-4xl mt-2 text-red-600">{countryData.cases}</div>
       </div>
       <div class="h-0.5 bg-gray-300 mx-3 my-1" />
-      <div
-        class="flex flex-row w-full text-center justify-around items-center"
-      >
+      <div class="flex flex-row w-full text-center justify-around items-center">
         <div class="flex flex-col text-center items-center px-3 py-2">
           <div class="text-md font-light">Active</div>
           <div class="text-xl text-blue-600">{countryData.active}</div>
@@ -98,13 +92,13 @@
       </div>
       <div class="bg-white rounded-md px-2 py-3">
         <div class="text-md font-light">New Recovered</div>
-        <div class="text-xl text-green-400">{countryData.todayRecovered}</div>
+        <div class="text-xl text-green-600">{countryData.todayRecovered}</div>
         <div class="text-md font-light">Total Recovered</div>
-        <div class="text-xl text-green-400">{countryData.recovered}</div>
+        <div class="text-xl text-green-600">{countryData.recovered}</div>
       </div>
       <div class="bg-white rounded-md px-2 py-3">
         <div class="text-md font-light">Test</div>
-        <div class="text-xl text-green-400">{countryData.tests}</div>
+        <div class="text-xl text-green-600">{countryData.tests}</div>
       </div>
     </div>
   </div>

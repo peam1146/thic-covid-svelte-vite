@@ -17,22 +17,13 @@ module.exports = {
   },
   theme: {
     extend: {
-      fontFamily: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Open Sans",
-        "Helvetica Neue",
-        "sans-serif",
-      ],
+      fontFamily: {
+        "sans-serif": "Poppins",
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
